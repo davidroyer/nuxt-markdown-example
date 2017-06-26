@@ -4,6 +4,9 @@
       <h1 class="title">
         Markdown Main Page
       </h1>
+      <h2 class="subtitle">
+        Testing Netlify build
+      </h2>
       <div v-html="test"></div>
     </div>
   </section>
