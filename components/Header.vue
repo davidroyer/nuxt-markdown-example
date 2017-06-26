@@ -29,8 +29,8 @@
       <!-- Add the modifier "is-active" to display it on mobile -->
       <div class="nav-right nav-menu" :class="{'is-active': menuIsActive}">
 
-        <nuxt-link class="nav-item" to="/dynamic/test1">Post 1</nuxt-link>
-        <nuxt-link class="nav-item" to="/dynamic/test2">Post 2</nuxt-link>
+        <nuxt-link @click.native="handleMenu" class="nav-item" to="/dynamic/test1">Post 1</nuxt-link>
+        <nuxt-link @click.native="handleMenu" class="nav-item" to="/dynamic/test2">Post 2</nuxt-link>
 
         <div class="nav-item">
           <div class="field is-grouped">
@@ -54,6 +54,11 @@ export default {
   data () {
     return {
       menuIsActive: false
+    }
+  },
+  methods: {
+    handleMenu () {
+      this.menuIsActive = false
     }
   }
 }
