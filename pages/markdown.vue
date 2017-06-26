@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import test1 from '~static/markdownFiles/test1.md'
+import test1 from '~static/dynamicMarkdownFiles/test1.md'
 
 export default {
   components: {

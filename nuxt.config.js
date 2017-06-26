@@ -1,4 +1,15 @@
 const { join } = require('path')
+// const fs = require('fs')
+// const axios = require('axios')
+// // const _ = require('lodash')
+
+//
+function getSlugs(post, index) {
+  // let slug = slugify(post.title)
+  return `/dynamic/${post.slug}`
+}
+//
+const postsArray = require('./static/posts.json')
 
 module.exports = {
   /*
@@ -21,10 +32,11 @@ module.exports = {
   modules: [
     '@nuxtjs/bulma',
     '@nuxtjs/font-awesome',
-    {
-      src: '@nuxtjs/markdownit',
-      options: { linkify: true }
-    }
+    ['@nuxtjs/markdownit', { linkify: true } ]
+    // {
+    //   src: '@nuxtjs/markdownit',
+    //   options: { linkify: true }
+    // }
   ],
   loading: { color: '#3B8070' },
   /*
@@ -37,6 +49,18 @@ module.exports = {
   ],
   router: {
     middleware: 'test'
+  },
+  generate: {
+    routes: function() {
+      return postsArray.map(getSlugs)
+      // return axios.get('~/static/posts.json')
+      // .then((res) => {
+      //   return _.map(res.data, function(post, key) {
+      //     return `/dynamic/${post.slug}`
+      //   })
+      //
+      // })
+    }
   },
   build: {
     /*

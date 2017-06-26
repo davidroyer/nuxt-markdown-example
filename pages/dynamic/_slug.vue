@@ -26,7 +26,7 @@
 
 export default {
   async asyncData ({params}) {
-    const fileContent = await import(`~/static/markdownFiles/${params.slug}.md`)
+    const fileContent = await import(`~/static/dynamicMarkdownFiles/${params.slug}.md`)
     return {
       content: fileContent
     }
