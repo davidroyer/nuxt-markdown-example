@@ -2,7 +2,6 @@
     <nav class="nav has-shadow">
       <div class="nav-left">
         <nuxt-link class="siteTitle nav-item" to="/">Nuxt Markdown Example</nuxt-link>
-          <button @click="testState">Test State</button>
       </div>
 
       <!-- <div class="nav-center">
