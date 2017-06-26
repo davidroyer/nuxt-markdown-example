@@ -35,6 +35,9 @@ module.exports = {
     // 'bulma/bulma.sass',
     join('~assets/css/main.scss')
   ],
+  router: {
+    middleware: 'test'
+  },
   build: {
     /*
     ** Run ESLINT on save
