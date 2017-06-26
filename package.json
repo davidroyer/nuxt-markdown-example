@@ -8,8 +8,10 @@
     "@nuxtjs/bulma": "^1.0.1",
     "@nuxtjs/font-awesome": "^1.0.1",
     "@nuxtjs/markdownit": "^0.0.2",
+    "node-sass": "^4.5.3",
     "nuxt": "latest",
-    "nuxt-cli": "^0.0.1"
+    "nuxt-cli": "^0.0.1",
+    "sass-loader": "^6.0.6"
   },
   "scripts": {
     "dev": "nuxt",

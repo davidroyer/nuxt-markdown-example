@@ -1,0 +1,16 @@
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.35s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+
+
+@media (max-width: 679px) {
+  .siteTitle {
+    font-size: 1.25em !important;
+  }
+}

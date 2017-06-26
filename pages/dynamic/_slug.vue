@@ -1,12 +1,25 @@
 <template>
-  <section class="container">
-    <div>
-      <h1 class="title">
-        {{$route.params.slug}}
-      </h1>
-      <div v-html="content"></div>
+
+    <div :key="$route.params.slug">
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              {{$route.params.slug}}
+            </h1>
+            <h2 class="subtitle">
+              A dynamic markdown file
+            </h2>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div v-html="content" class="contentWrapper"></div>
+      </div>
     </div>
-  </section>
+
+
+
 </template>
 
 <script>
@@ -22,4 +35,7 @@ export default {
 </script>
 
 <style>
+.contentWrapper section {
+  padding: 1.25em;
+}
 </style>

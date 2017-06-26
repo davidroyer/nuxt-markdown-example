@@ -1,10 +1,22 @@
 <template>
-  <section class="container">
-    <div>
+  <div>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Markdown files with Nuxt.js
+          </h1>
+          <h2 class="subtitle">
+            Use a specfic file or dynamic importing
+          </h2>
+        </div>
+      </div>
+    </section>
+    <div class="container">
       <!-- <logo/> -->
-      <div v-html="content"></div>
+      <div v-html="content" class="contentWrapper"></div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

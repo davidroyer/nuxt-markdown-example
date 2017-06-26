@@ -1,3 +1,5 @@
+const { join } = require('path')
+
 module.exports = {
   /*
   ** Headers of the page
@@ -28,10 +30,16 @@ module.exports = {
   /*
   ** Build configuration
   */
+  css: [
+    // 'hover.css/css/hover-min.css',
+    // 'bulma/bulma.sass',
+    join('~assets/css/main.scss')
+  ],
   build: {
     /*
     ** Run ESLINT on save
     */
+    extractCSS: true,
     extend (config, ctx) {
       if (ctx.isClient) {
         config.module.rules.push({

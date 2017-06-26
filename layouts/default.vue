@@ -1,12 +1,5 @@
 <template>
   <div>
-    <!-- <nav class="container">
-      <nuxt-link to="/">Home</nuxt-link>
-      <nuxt-link to="/markdown">Markdown</nuxt-link>
-      <nuxt-link to="/dynamic/test1">Post 1</nuxt-link>
-      <nuxt-link to="/dynamic/test2">Post 2</nuxt-link>
-    </nav> -->
-    <!-- <nuxt-link to="/dynamic/test3">Post 3</nuxt-link> -->
     <site-header></site-header>
     <nuxt/>
   </div>
@@ -17,10 +10,22 @@ import SiteHeader from '~components/Header.vue'
 export default {
   components: {
     SiteHeader
+  },
+  beforeRouteLeave (to, from, next) {
+    console.log(this)
+    // this.menuIsActive = false
+    // called when the route that renders this component is about to
+    // be navigated away from.
+    // has access to `this` component instance.
   }
 }
 </script>
 <style>
+.section {
+  padding: 1em;
+}
+
+
 html
 {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
