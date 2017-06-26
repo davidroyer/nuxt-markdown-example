@@ -18,6 +18,7 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/bulma',
+    '@nuxtjs/font-awesome',
     {
       src: '@nuxtjs/markdownit',
       options: { linkify: true }

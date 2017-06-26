@@ -1,7 +1,7 @@
 <template lang="html">
     <nav class="nav">
       <div class="nav-left">
-        <nuxt-link class="nav-item" to="/">Nuxt Markdown Example</nuxt-link>
+        <nuxt-link class="siteTitle nav-item" to="/">Nuxt Markdown Example</nuxt-link>
       </div>
 
       <div class="nav-center">
@@ -43,11 +43,11 @@
               </a>
             </p>
             <p class="control">
-              <a class="button is-primary">
+              <a class="button is-primary" target="_blank" rel="noopener" href="https://github.com/davidroyer/nuxt-markdown-example">
                 <span class="icon">
-                  <i class="fa fa-download"></i>
+                  <i class="fa fa-github"></i>
                 </span>
-                <span>Download</span>
+                <span>Github Repoo</span>
               </a>
             </p>
           </div>
@@ -57,9 +57,14 @@
 </template>
 
 <script>
+
 export default {
 }
 </script>
 
 <style lang="css">
+.siteTitle {
+  font-weight: 700;
+  font-size: 1.75em;
+}
 </style>
