@@ -1,6 +1,6 @@
 # nuxt-markdown-example
 
-> Nuxt.js project
+> An example of using markdown files for content with Nuxt.js / Vue.js
 
 ## Build Setup
 

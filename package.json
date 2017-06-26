@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Nuxt.js project",
   "author": "David Royer <droyer01@gmail.com>",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@nuxtjs/bulma": "^1.0.1",
     "@nuxtjs/markdownit": "^0.0.2",
