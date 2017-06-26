@@ -1,5 +1,5 @@
 <template lang="html">
-    <nav class="nav">
+    <nav class="nav has-shadow">
       <div class="nav-left">
         <nuxt-link class="siteTitle nav-item" to="/">Nuxt Markdown Example</nuxt-link>
       </div>

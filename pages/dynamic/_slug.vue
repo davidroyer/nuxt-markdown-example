@@ -14,7 +14,7 @@
         </div>
       </section>
       <div class="container">
-        <div v-html="content" class="contentWrapper"></div>
+        <div v-html="content" class="contentWrapper content"></div>
       </div>
     </div>
 
@@ -35,7 +35,5 @@ export default {
 </script>
 
 <style>
-.contentWrapper section {
-  padding: 1.25em;
-}
+
 </style>

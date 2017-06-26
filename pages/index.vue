@@ -14,7 +14,7 @@
     </section>
     <div class="container">
       <!-- <logo/> -->
-      <div v-html="content" class="contentWrapper"></div>
+      <div v-html="content" class="contentWrapper content"></div>
     </div>
   </div>
 </template>
