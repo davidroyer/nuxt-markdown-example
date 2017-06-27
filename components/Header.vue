@@ -34,6 +34,8 @@
 
           <nuxt-link class="nav-item" to="/dynamic/test1">Post 1</nuxt-link>
           <nuxt-link class="nav-item" to="/dynamic/test2">Post 2</nuxt-link>
+          <nuxt-link class="nav-item" to="/dynamic/test3">Post 3</nuxt-link>
+          <nuxt-link class="nav-item" to="/dynamic/test4">Post 4</nuxt-link>
 
           <div class="nav-item">
             <div class="field is-grouped">
