@@ -1,12 +1,46 @@
 const { join } = require('path')
+const dir = require('node-dir')
+const routesArray = []
+const fs = require('fs')
+const _ = require('lodash')
+
+var files = fs.readdirSync('./static/dynamicMarkdownFiles');
+function createRoutesArray() {
+  files.forEach(function (file) {
+      var name = file.substr(0, file.lastIndexOf('.'));
+      var route = '/dynamic/' + name
+      routesArray.push(route)
+  });
+}
+
+function returnRoutes() {
+  dir.readFiles('./static/dynamicMarkdownFiles', {
+        match: /.md$/,
+        shortName: true,
+        exclude: /^\./
+        }, function(err, content, next) {
+            if (err) throw err;
+            // console.log('content:', content);
+            next();
+        },
+        function(err, files){
+            if (err) throw err;
+            // fileNamesArray = [];
+            files.forEach(function (file) {
+                var name = file.substr(0, file.lastIndexOf('.'));
+                var path = '/dynamic/' + name
+                return path
+            });
+        });
+}
 // const fs = require('fs')
 // const axios = require('axios')
 // // const _ = require('lodash')
 
 //
 function getSlugs(post, index) {
-  // let slug = slugify(post.title)
-  return `/dynamic/${post.slug}`
+  let slug = post.substr(0, post.lastIndexOf('.'));
+  return `/dynamic/${slug}`
 }
 //
 const postsArray = require('./static/posts.json')
@@ -51,8 +85,17 @@ module.exports = {
     middleware: 'test'
   },
   generate: {
+    // routes: function() {
+    //   returnRoutes()
+    // }
     routes: function() {
-      return postsArray.map(getSlugs)
+
+        return files.map(getSlugs)
+        // return _.map(routesArray, function(file) {
+        //   let slug = file.substr(0, file.lastIndexOf('.'));
+        //   return `/dynamic/${slug}`
+        // })
+
       // return axios.get('~/static/posts.json')
       // .then((res) => {
       //   return _.map(res.data, function(post, key) {
